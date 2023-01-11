@@ -1,7 +1,13 @@
-import type { FC } from "react";
+import { Suspense } from "react";
+import { useRoutes } from "react-router-dom";
 
-const App : FC = () => {
-  return <p>hello world</p>;
-}
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
+import routes from "~react-pages";
+console.log(routes);
+
+const App = () => {
+  return <Suspense fallback={<p>Loading...</p>}>{useRoutes(routes)}</Suspense>;
+};
 
 export default App;

@@ -1,4 +1,4 @@
-name: Lint
+name: Test
 
 on:
   pull_request:
@@ -7,7 +7,7 @@ on:
 
 jobs:
   CI:
-    name: Lint
+    name: Test
     runs-on: ubuntu-latest
     timeout-minutes: 3
     steps:
@@ -24,4 +24,4 @@ jobs:
         run: yarn install --immutable
 
       - name: Lint code
-        run: yarn jest
+        run: yarn test

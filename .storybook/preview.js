@@ -1,7 +1,8 @@
-import createCache from '@emotion/cache'
-import {CacheProvider} from "@emotion/react";
+import createCache from "@emotion/cache";
+import { CacheProvider } from "@emotion/react";
+import { CustomProvider } from "../src/style/theme/theme-provider";
 
-const cache = createCache({ prepend: true, key: 'twin' })
+const cache = createCache({ prepend: true, key: "twin" });
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
@@ -11,12 +12,14 @@ export const parameters = {
       date: /Date$/,
     },
   },
-}
+};
 
 export const decorators = [
-  Story => (
-      <CacheProvider value={cache}>
+  (Story) => (
+    <CacheProvider value={cache}>
+      <CustomProvider>
         <Story />
-      </CacheProvider>
+      </CustomProvider>
+    </CacheProvider>
   ),
-]
+];

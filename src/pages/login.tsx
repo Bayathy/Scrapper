@@ -1,9 +1,11 @@
+import { css, useTheme } from "@emotion/react";
 import type { FC } from "react";
 
 const Login: FC = () => {
+  const theme = useTheme()
   return (
-    <div>
-      <p>Login Page</p>
+    <div css={css({background: theme.color.primary})}>
+      <p css={css`c`}>Login Page</p>
     </div>
   );
 };

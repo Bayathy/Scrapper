@@ -15,7 +15,10 @@ const App = () => {
           * {
             padding: 0;
             margin: 0;
-            min-height:100vh
+            box-sizing: border-box;
+          }
+          body {
+            min-height: 100vh;
           }
         `}
       />

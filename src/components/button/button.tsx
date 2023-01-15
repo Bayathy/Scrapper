@@ -1,18 +1,14 @@
-import styled from "@emotion/styled"
+import styled from "@emotion/styled";
 
-import type { FC } from "react";
-import type { Component } from "../../types/components";
-
-export type ButtonProps = Component<"button">;
-
-const StyledButton = styled.button
-
-export const Button: FC<ButtonProps> = ({ children, css }) => {
-  return (
-    <button
-      css={css}
-    >
-      {children}
-    </button>
-  );
-};
+export const StyledButton = styled.button`
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  padding: 0.5rem 2rem;
+  background: white;
+  border-radius: 20px;
+  :hover {
+    background-color: gray;
+  }
+`;

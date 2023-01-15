@@ -10,6 +10,7 @@
   "schedule": [
     "every weekend"
   ],
+  "baseBranches":["dev"],
   "dependencyDashboard": true,
   "npm": {
     "extends": [
@@ -24,6 +25,15 @@
       {
         "matchDepTypes": [
           "devDependencies"
+        ],
+        "matchUpdateTypes": [
+          "patch"
+        ],
+        "automerge": true
+      },
+      {
+        "matchDepTypes": [
+          "Dependencies"
         ],
         "matchUpdateTypes": [
           "patch"

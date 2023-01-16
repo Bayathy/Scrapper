@@ -1,8 +1,12 @@
 import { css, useTheme } from "@emotion/react";
 import type { FC } from "react";
+import { useNavigate } from "react-router";
+import { StyledButton } from "../components/button/button";
 
 const Login: FC = () => {
   const theme = useTheme();
+  const navigate = useNavigate();
+
   return (
     <div
       css={css`
@@ -12,18 +16,18 @@ const Login: FC = () => {
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        gap: 2rem;
+        gap: 5rem;
       `}
     >
       <p
         css={css`
           color: ${theme.color.secondary};
-          font-size: 3rem;
+          font-size: 4rem;
         `}
       >
         Scrapper
       </p>
-      <button>ログイン</button>
+      <StyledButton onClick={() => navigate("/")}>Login</StyledButton>
     </div>
   );
 };

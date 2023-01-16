@@ -12,6 +12,7 @@ parserOptions:
 
 rules:
   "import/no-unresolved": off
+  "unicorn/prevent-abbreviations": off
 overrides:
   - files: "**/*.@(stories|test).tsx"
     rules:

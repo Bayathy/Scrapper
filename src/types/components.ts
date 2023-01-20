@@ -6,5 +6,5 @@ export type Component<
   T extends keyof JSX.IntrinsicElements | JSXElementConstructor<any>
 > = {
   children?: React.ReactNode;
-  css?: CSSInterpolation;
+  cx?: CSSInterpolation;
 } & React.ComponentProps<T>;

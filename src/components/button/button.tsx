@@ -1,10 +1,10 @@
 import styled from "@emotion/styled";
 import type { FC } from "react";
 import { Component } from "../../types/components";
-import { css } from "@emotion/react";
+import { css, keyframes } from "@emotion/react";
 
 export type IconButtonProps = {
-  imageSrc: string;
+  imageSrc?: string;
 } & Component<"button">;
 
 export const StyledButton = styled.button`
@@ -20,6 +20,17 @@ export const StyledButton = styled.button`
   }
 `;
 
+const bounce = keyframes`
+  from {
+    outline: 0px solid gray;
+    outline-offset: -4px;
+  }
+  to {
+    outline: 4px solid gray;
+    outline-offset: -4px;
+  }
+`;
+
 export const IconButton: FC<IconButtonProps> = ({
   cx,
   imageSrc,
@@ -32,12 +43,31 @@ export const IconButton: FC<IconButtonProps> = ({
       {...rest}
       css={[
         css`
+          box-sizing: border-box;
+          border: none;
+          background: none;
+          width: 3rem;
+          height: 3rem;
           border-radius: 999px;
+          padding: 0;
+          :hover {
+            animation: ${bounce} 0.2s;
+            outline: 4px solid gray;
+            outline-offset: -4px;
+          }
         `,
         cx,
       ]}
     >
-      <img src={imageSrc} alt="your Icon" />
+      <img
+        css={css`
+          width: inherit;
+          aspect-ratio: 1/1;
+          border-radius: 999px;
+        `}
+        src={imageSrc ?? ""}
+        alt="your Icon"
+      />
     </button>
   );
 };

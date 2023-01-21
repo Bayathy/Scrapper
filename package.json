@@ -20,7 +20,7 @@
     "react-dom": "^18.2.0",
     "react-router": "^6.7.0",
     "react-router-dom": "^6.7.0",
-    "swr": "^2.0.0"
+    "swr": "^2.0.1"
   },
   "devDependencies": {
     "@babel/core": "^7.20.12",

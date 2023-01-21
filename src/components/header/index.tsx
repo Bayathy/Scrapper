@@ -1,6 +1,5 @@
 import type { FC } from "react";
 import { css, useTheme } from "@emotion/react";
-import { StyledButton } from "../button/button";
 
 export const Header: FC = () => {
   const theme = useTheme();

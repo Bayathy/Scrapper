@@ -1,7 +1,15 @@
 import type { FC } from "react";
+import { Header } from "../components/header";
 
 const App: FC = () => {
-  return <p>hello world</p>;
+  return (
+    <>
+      <Header />
+      <main>
+        <p>hello world</p>
+      </main>
+    </>
+  );
 };
 
 export default App;

@@ -1,5 +1,5 @@
 import { composeStories } from "@storybook/testing-react";
-import * as ButtonStories from "./button.stories";
+import * as ButtonStories from "./styled-button.stories";
 import { render, screen, within } from "@testing-library/react";
 import React from "react";
 import { StyledButton } from "./button";

@@ -1,5 +1,7 @@
 import type { FC } from "react";
 import { css, useTheme } from "@emotion/react";
+import { IconButton } from "../button/button";
+import { Icon } from "@iconify/react";
 
 export const Header: FC = () => {
   const theme = useTheme();
@@ -14,9 +16,24 @@ export const Header: FC = () => {
     >
       <div
         css={css`
+          height: 100%;
+          display: flex;
+          align-items: center;
           margin: auto;
+          padding-inline: 16px;
+          justify-content: space-between;
+          align-content: center;
         `}
-      ></div>
+      >
+        <Icon
+          css={css`
+            font-size: 2.5rem;
+            color: white;
+          `}
+          icon="ri:menu-2-fill"
+        />
+        <IconButton imageSrc="https://images.ctfassets.net/hrltx12pl8hq/01rJn4TormMsGQs1ZRIpzX/02e9885a9ae69312da844bc58eedced1/Artboard_Copy_22.png?fit=fill&w=600&h=400" />
+      </div>
     </header>
   );
 };

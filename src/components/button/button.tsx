@@ -20,14 +20,13 @@ export const StyledButton = styled.button`
   }
 `;
 
-
 export const IconButton: FC<IconButtonProps> = ({
   cx,
   imageSrc,
   onClick,
   ...rest
 }) => {
-  const theme = useTheme()
+  const theme = useTheme();
 
   const bounce = keyframes`
   from {

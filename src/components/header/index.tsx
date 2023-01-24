@@ -21,17 +21,10 @@ export const Header: FC = () => {
           align-items: center;
           margin: auto;
           padding-inline: 16px;
-          justify-content: space-between;
+          justify-content: end;
           align-content: center;
         `}
       >
-        <Icon
-          css={css`
-            font-size: 2.5rem;
-            color: white;
-          `}
-          icon="ri:menu-2-fill"
-        />
         <IconButton imageSrc="https://images.ctfassets.net/hrltx12pl8hq/01rJn4TormMsGQs1ZRIpzX/02e9885a9ae69312da844bc58eedced1/Artboard_Copy_22.png?fit=fill&w=600&h=400" />
       </div>
     </header>

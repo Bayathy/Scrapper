@@ -1,5 +1,5 @@
 import createCache from "@emotion/cache";
-import { CacheProvider } from "@emotion/react";
+import { CacheProvider, Global, css } from "@emotion/react";
 import { CustomProvider } from "../src/style/theme/theme-provider";
 
 const cache = createCache({ prepend: true, key: "twin" });
@@ -12,12 +12,21 @@ export const parameters = {
       date: /Date$/,
     },
   },
+  layout: "fullscreen"
 };
 
 export const decorators = [
   (Story) => (
     <CacheProvider value={cache}>
       <CustomProvider>
+      <Global
+        styles={css`
+          * {
+            padding: 0;
+            margin: 0;
+          }
+        `}
+      />
         <Story />
       </CustomProvider>
     </CacheProvider>

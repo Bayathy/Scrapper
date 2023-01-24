@@ -1,7 +1,10 @@
-import styled from "@emotion/styled";
 import type { FC } from "react";
-import { Component } from "../../types/components";
+
 import { css, keyframes, useTheme } from "@emotion/react";
+import styled from "@emotion/styled";
+
+import type { Component } from "../../types/components";
+
 
 export type IconButtonProps = {
   imageSrc?: string;
@@ -20,14 +23,13 @@ export const StyledButton = styled.button`
   }
 `;
 
-
 export const IconButton: FC<IconButtonProps> = ({
   cx,
   imageSrc,
   onClick,
   ...rest
 }) => {
-  const theme = useTheme()
+  const theme = useTheme();
 
   const bounce = keyframes`
   from {

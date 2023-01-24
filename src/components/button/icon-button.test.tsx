@@ -1,8 +1,7 @@
 import { composeStories } from "@storybook/testing-react";
+import { render, screen } from "@testing-library/react";
+
 import * as ButtonStories from "./styled-button.stories";
-import { render, screen, within } from "@testing-library/react";
-import React from "react";
-import { IconButton } from "./button";
 
 const { Default } = composeStories(ButtonStories);
 

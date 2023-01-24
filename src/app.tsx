@@ -1,6 +1,7 @@
-import { css, Global } from "@emotion/react";
 import { Suspense } from "react";
 import { useRoutes } from "react-router-dom";
+
+import { css, Global } from "@emotion/react";
 
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore

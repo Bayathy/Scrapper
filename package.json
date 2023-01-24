@@ -48,7 +48,7 @@
     "@vitejs/plugin-react": "^3.0.1",
     "babel-jest": "^29.3.1",
     "eslint": "^8.31.0",
-    "eslint-config-bayathy": "^1.0.25",
+    "eslint-config-bayathy": "^1.0.26",
     "eslint-plugin-storybook": "^0.6.10",
     "jest": "^29.3.1",
     "jest-environment-jsdom": "^29.3.1",

@@ -1,7 +1,8 @@
 import type { FC } from "react";
+
 import { css, useTheme } from "@emotion/react";
+
 import { IconButton } from "../button/button";
-import { Icon } from "@iconify/react";
 
 export const Header: FC = () => {
   const theme = useTheme();

@@ -1,5 +1,6 @@
-import type { CSSInterpolation } from "@emotion/serialize";
 import type { JSXElementConstructor } from "react";
+
+import type { CSSInterpolation } from "@emotion/serialize";
 
 export type Component<
   // eslint-disable-next-line @typescript-eslint/no-explicit-any

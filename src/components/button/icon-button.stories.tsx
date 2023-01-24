@@ -3,7 +3,6 @@ import { IconButton } from "./button";
 import type { IconButtonProps } from "./button";
 import type { Meta, StoryObj } from "@storybook/react";
 
-
 const meta: Meta<IconButtonProps> = {
   title: "Button/IconButton",
   component: IconButton,

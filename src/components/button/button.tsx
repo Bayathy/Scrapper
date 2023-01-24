@@ -5,7 +5,6 @@ import styled from "@emotion/styled";
 
 import type { Component } from "../../types/components";
 
-
 export type IconButtonProps = {
   imageSrc?: string;
 } & Component<"button">;

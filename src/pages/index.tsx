@@ -1,9 +1,9 @@
 import type { FC } from "react";
 
-import { Tabs } from "../components/Tab";
 import { Header } from "../components/header";
+import { Tabs } from "../components/tabs";
 
-import type { TabItemProps } from "../components/Tab";
+import type { TabItemProps } from "../components/tabs";
 
 const tabProps: TabItemProps[] = [
   { tabLabel: "Tab1", href: "/", id: 1 },

@@ -1,5 +1,5 @@
 import type { FC } from "react";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 import { css, useTheme } from "@emotion/react";
 
@@ -16,6 +16,8 @@ export type TabsProps = { tabItems: Array<TabItemProps> };
 export const Tabs: FC<TabsProps> = ({ tabItems }) => {
   const navigate = useNavigate();
   const theme = useTheme();
+  const loc = useLocation();
+
   return (
     <menu
       css={css`
@@ -34,7 +36,15 @@ export const Tabs: FC<TabsProps> = ({ tabItems }) => {
         `}
       >
         {tabItems.map(({ tabLabel, href, id }) => (
-          <li key={id}>
+          <li
+            key={id}
+            css={css({
+              borderBottom:
+                loc.pathname === href
+                  ? `solid 0.5rem ${theme.color.secondary}`
+                  : "none",
+            })}
+          >
             <StyledButton
               css={css`
                 width: 100%;

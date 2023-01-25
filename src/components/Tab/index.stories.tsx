@@ -1,6 +1,6 @@
 import { Tabs } from ".";
 
-import type { TabsProps, TabItemProps } from ".";
+import type { TabItemProps } from ".";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof Tabs> = {

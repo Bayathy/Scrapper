@@ -19,7 +19,7 @@ export const Tabs: FC<TabsProps> = ({ tabItems }) => {
   const loc = useLocation();
 
   return (
-    <menu
+    <nav
       css={css`
         width: 100%;
         background: ${theme.color.primary};
@@ -59,6 +59,6 @@ export const Tabs: FC<TabsProps> = ({ tabItems }) => {
           </li>
         ))}
       </ul>
-    </menu>
+    </nav>
   );
 };

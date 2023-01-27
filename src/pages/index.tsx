@@ -14,9 +14,7 @@ const App: FC = () => {
   return (
     <>
       <Header />
-      <nav>
-        <Tabs tabItems={tabProps} />
-      </nav>
+      <Tabs tabItems={tabProps} />
       <main>
         <p>hello world</p>
       </main>

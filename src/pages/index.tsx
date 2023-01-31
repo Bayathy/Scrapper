@@ -1,5 +1,4 @@
 import type { FC } from "react";
-import { useEffect } from "react";
 
 import axios from "axios";
 import useSWR from "swr";
@@ -19,7 +18,6 @@ const fetcher = (url: string) => axios.get(url).then((res) => res.data);
 const App: FC = () => {
   const { data, isLoading } = useSWR("/list", fetcher);
 
-  useEffect(() => console.log(data), [isLoading]);
   return (
     <>
       <Header />

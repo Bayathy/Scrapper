@@ -27,6 +27,10 @@ export const decorators = [
                 padding: 0;
                 margin: 0;
               }
+
+              .ProseMirror:focus {
+                outline: none;
+              }
             `}
           />
           <Story />

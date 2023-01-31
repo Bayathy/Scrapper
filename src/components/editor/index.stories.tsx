@@ -1,14 +1,14 @@
-// import { Editor } from ".";
+import { TextEditor } from ".";
 
-// import type { Meta, StoryObj } from "@storybook/react";
+import type { Meta, StoryObj } from "@storybook/react";
 
-// const meta: Meta<typeof Editor> = {
-//   title: "Editor",
-//   component: Editor,
-// };
+const meta: Meta<typeof TextEditor> = {
+  title: "TextEditor",
+  component: TextEditor,
+};
 
-// export default meta;
+export default meta;
 
-// export const Default: StoryObj<typeof Editor> = {
-//   render: () => <Editor />,
-// };
+export const Default: StoryObj<typeof TextEditor> = {
+  render: () => <TextEditor />,
+};

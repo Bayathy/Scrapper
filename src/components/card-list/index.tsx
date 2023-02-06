@@ -12,7 +12,11 @@ export const MenuCardList: FC<MenuCardListProps> = ({ cardList }) => {
   const theme = useTheme();
 
   return (
-    <ul>
+    <ul
+      css={css`
+        list-style: none;
+      `}
+    >
       {cardList.map(({ title, id }) => (
         <li
           key={id}
@@ -24,9 +28,7 @@ export const MenuCardList: FC<MenuCardListProps> = ({ cardList }) => {
               border-width: 2px 0px;
             }
             :hover {
-              border-width: 2px 0px;
               background: ${theme.color.extra};
-              border-color: black;
             }
           `}
         >

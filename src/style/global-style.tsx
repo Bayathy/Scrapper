@@ -14,7 +14,6 @@ export const GlobalStyles: FC = () => {
         body {
           min-height: 100vh;
         }
-
         .ProseMirror:focus {
           outline: none;
         }
